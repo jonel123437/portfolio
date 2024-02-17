@@ -74,7 +74,7 @@
 			<section class="hero container">
 				<img class="hero__img" src="assets/img/profile.jpg" alt="profile picture">
 				<h2 class="hero__subtitle">Hi, I'm Jonel</h2>
-				<h1 class="hero__title">FRONT-END <br> WEB DEVELOPER</h1>
+				<h1 class="hero__title"></h1>
 				<p class="hero__description">A student in CITE Technical Institute taking up the <strong> Computer Engineering Program.</strong></p>
 				<a class="hero__btn btn" href="#">Reach out</a>
 			</section>
@@ -229,88 +229,10 @@
 		<footer class="footer container section">
 			<h3 class="footer__title">~ Jonel C. Escaran ~</h3>
 		</footer>
-		<!-- mobile links -->
-		<script>
-			const mobileNav = () => {
-				const headerbtn = document.querySelector('.header__bars');
-				const mobileNav = document.querySelector('.mobile-nav');
-				const mobileLinks = document.querySelectorAll('.mobile-nav__link');
-
-				let isMobileNavOpen = false;
-				
-				headerbtn.addEventListener('click', () => {
-					isMobileNavOpen = !isMobileNavOpen;
-					if (isMobileNavOpen) {
-						mobileNav.style.display = 'flex';
-						document.body.style.overflowY = 'hidden';						
-					} else {
-						mobileNav.style.display = 'none';
-						document.body.style.overflowY = 'auto';						
-					}
-				});
-
-				mobileLinks.forEach(link => {
-					link.addEventListener('click', () => {
-						isMobileNavOpen = false;
-						mobileNav.style.display = 'none';
-						document.body.style.overflowY = 'auto';
-					});
-				});
-			};
-
-			mobileNav();
-		</script>
-
-		<!-- darkmode -->
-		<script>			
-			const darkMode = () => {
-				const themeToggleBtns = document.querySelectorAll('#theme-toggle');
-				
-				const theme = localStorage.getItem('theme');
-
-				theme && document.body.classList.add(theme);
-
-				const handleThemeToggle = () =>{
-					document.body.classList.toggle('light-mode');
-						if (document.body.classList.contains('light-mode')){
-							localStorage.setItem('theme', 'light-mode');
-						} else {
-							localStorage.removeItem('theme');
-						}
-				}
-
-				themeToggleBtns.forEach(btn =>
-					btn.addEventListener('click', handleThemeToggle)
-				);
-			};
-
-			darkMode();
-		</script>
-
-		<!-- lazy-loading -->
-		<script>
-			const lazyLoading = () => {
-				const lazyImgs = document.querySelectorAll('.lazy');
-
-				const observer = new IntersectionObserver((entries, observer) => {
-					entries.forEach(entry => {
-						if (entry.isIntersecting) {
-							let img = entry.target;
-							img.src = img.dataset.src;
-							img.classList.remove('loading');
-							img.classList.add('loaded');
-							observer.unobserve(img);
-						};
-					});
-				});		
-
-				lazyImgs.forEach(img => {
-					observer.observe(img);
-				});
-			};
-
-			lazyLoading();
-		</script>
-		
+		<script src="assets/js/mobile-nav.js"></script>
+		<script src="assets/js/dark-mode.js"></script>
+		<script src="assets/js/lazy-loading.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/typewriter.js"></script>
 	</body>
 </html>
