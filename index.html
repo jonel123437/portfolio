@@ -11,17 +11,20 @@
 		<link rel="stylesheet" href="assets/css/footer.css">
 		<link rel="stylesheet" href="assets/css/mobile-nav.css">
 		<link rel="stylesheet" href="assets/css/modern-normalize.css">
+		<link rel="icon" href="assets/img/jelogo.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 		<title>Portfolio | Jonel C. Escaran</title>
 		<link href="https://api.fontshare.com/v2/css?f[]=general-sans@600&display=swap" rel="stylesheet">
 
 	</head>
 
 	<body>
-		<header class="header container">
+		<header id="header" class="header container">
 			<nav>
 				<ul class="header__menu">
 					<li><a class="header__link" href="#about">About</a></li>
 					<li><a class="header__link" href="#featured">Work</a></li>
+					<li><a class="header__link" href="#project">Projects</a></li>
 					<li><a class="header__link" href="#contact">Contact</a></li>
 					<li class="header__line"></li>
 					<li>
@@ -71,7 +74,7 @@
 		</div>
 		<!-- End of Mobile Navigation -->
 		<main>
-			<section class="hero container">
+			<section id="hero" class="hero container">
 				<img class="hero__img" src="assets/img/profile.jpg" alt="profile picture">
 				<h2 class="hero__subtitle">Hi, I'm Jonel</h2>
 				<h1 class="hero__title"></h1>
@@ -81,12 +84,9 @@
 			<section id="about" class="about container section">
 				<div class="about__content">
 					<h2 class="about__title">About</h2>
-					<p class="about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus, sem ac porta luctus, elit est efficitur sem, non consequat libero lacus porttitor orci. Integer vitae massa risus. Suspendisse sit amet faucibus ante. Nam tempus id odio id condimentum. Fusce ullamcorper porta maximus. Donec aliquet elit non malesuada posuere. Vestibulum et faucibus tortor, sed interdum tellus.
-					</p>
-					<p class="about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus, sem ac porta luctus, elit est efficitur sem, non consequat libero lacus porttitor orci. Integer vitae massa risus. Suspendisse sit amet faucibus ante. Nam tempus id odio id condimentum. Fusce ullamcorper porta maximus. Donec aliquet elit non malesuada posuere. Vestibulum et faucibus tortor, sed interdum tellus.
-					</p>
-					<!-- <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus, sem ac porta luctus, elit est efficitur sem, non consequat libero lacus porttitor orci. Integer vitae massa risus. Suspendisse sit amet faucibus ante. Nam tempus id odio id condimentum. Fusce ullamcorper porta maximus. Donec aliquet elit non malesuada posuere. Vestibulum et faucibus tortor, sed interdum tellus. -->
-					</p>
+					<p class="about__description">Nam tempus id odio id condimentum. Fusce ullamcorper porta maximus. Donec aliquet elit non malesuada posuere. Vestibulum et faucibus tortor, sed interdum tellus.</p>
+					<p class="about__description">Nam tempus id odio id condimentum. Fusce ullamcorper porta maximus. Donec aliquet elit non malesuada posuere. Vestibulum et faucibus tortor, sed interdum tellus.</p>
+					<p class="about__description">Nam tempus id odio id condimentum. Fusce ullamcorper porta maximus. Donec aliquet elit non malesuada posuere. Vestibulum et faucibus tortor, sed interdum tellus.</p>
 					<hr class="about__hr">
 					<h3 class="about__subtitle">Technologies</h3>
 					<div class="about__ul-container">
@@ -148,7 +148,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="work container section">
+			<section id="project" class="work container section">
 				<h2 class="work__title">Projects</h2>
 				<p class="work__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis, eros in commodo rhoncus, justo metus fringilla tellus, eu aliquam mi felis a eros. In eleifend vehicula nulla eget ornare.</p>
 				<div class="work__container">
@@ -226,6 +226,9 @@
 				<a class="contact__btn btn" href="mailto:jonelescaran@gmail.com" target="_blank">Reach Out</a>
 			</section>
 		</main>
+		<a class="back-to-top" href="#header">
+			<span class="material-symbols-outlined">expand_less</span>
+		</a>
 		<footer class="footer container section">
 			<h3 class="footer__title">~ Jonel C. Escaran ~</h3>
 		</footer>
@@ -234,5 +237,33 @@
 		<script src="assets/js/lazy-loading.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/typewriter.js"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var backToTopBtn = document.querySelector('.back-to-top');
+
+				// Function to handle scroll event
+				function handleScroll() {
+					// If the user has scrolled more than 300 pixels from the top, show the button; otherwise, hide it
+					if (window.scrollY > 500) {
+						backToTopBtn.style.display = "block";
+					} else {
+						backToTopBtn.style.display = "none";
+					}
+				}
+
+				// Add scroll event listener
+				window.addEventListener('scroll', handleScroll);
+
+				// Add click event listener for back-to-top button
+				backToTopBtn.addEventListener('click', function(e) {
+					e.preventDefault();
+					document.querySelector('#header').scrollIntoView({ behavior: 'smooth' });
+				});
+
+				// Hide the back-to-top button initially
+				backToTopBtn.style.display = "none";
+			});
+		</script>
 	</body>
 </html>

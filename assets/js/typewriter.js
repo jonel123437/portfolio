@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    var titles = ['FRONT-END WEB DEVELOPER.', 'WEB APPLICATION DEVELOPER'];
+    var titles = ['FRONT-END WEB DEVELOPER.', 'WEB APPLICATION DEVELOPER.'];
     var part,
         i = 0,
         offset = 0,
