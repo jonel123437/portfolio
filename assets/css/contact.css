@@ -23,7 +23,6 @@
     font-size: var(--size-sm);
 }
 
-
 /* xs */
 @media (min-width: 475px) {
     .contact {

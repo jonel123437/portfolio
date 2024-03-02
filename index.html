@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 	<head>
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/utils.css">
@@ -35,7 +36,7 @@
 						</button>
 					</li>
 					<li>
-						<a class="header__resume btn" href="#">Resume</a>
+						<a class="header__resume btn" href="https://drive.google.com/file/d/1o51_olHQjx-q-qmAjYLtlNk8GC9fwl3i/view?usp=sharing">Resume</a>
 					</li>
 				</ul>
 				<button class="header__bars">
@@ -54,6 +55,9 @@
 					</li>
 					<li>
 						<a class="mobile-nav__link" href="#featured">Work</a>
+					</li>
+					<li>
+						<a class="mobile-nav__link" href="#project">Projects</a>
 					</li>
 					<li>
 						<a class="mobile-nav__link" href="#contact">Contact</a>
@@ -110,23 +114,26 @@
 				<h3 class="featured__subtitle">Featured project</h3>
 				<div class="featured__wrapper">
 					<h2 class="featured__title">Loan application</h2>
-					<a class="featured__link" href="">
+					<a class="featured__link" href="https://github.com/Christianlloyd14/BeanLoan">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
 						</svg>					  
 					</a>
 				</div>
-				<p class="featured__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius eget erat non pellentesque. Phasellus elit arcu, blandit non velit posuere, blandit fringilla justo. Suspendisse condimentum non nisi at sagittis. Nullam sagittis urna purus. Praesent lobortis dignissim libero, et maximus ipsum blandit non. Nam efficitur, turpis a ultrices commodo, ante nunc placerat eros, porta laoreet magna nulla a leo. Vestibulum efficitur iaculis enim, non bibendum leo tristique facilisis. Donec arcu erat, lacinia nec elementum in, rhoncus aliquet nulla. Morbi malesuada enim a risus congue convallis. Fusce eu finibus quam.</p>
+				<p class="featured__description">Our loan application app is a collaborative group project involving multiple individuals. We chose this project to help users borrow or lend money. There are two roles within our application: the admin and the user. The admin has the authority to approve or reject users' requests to borrow money, as well as access the database. Meanwhile, users only need a valid account to log in and request a loan.</p>
 				<div class="featured__info-container">
 					<div>
-						<h3 class="featured__label">Language used</h3>
-						<ul class="featured__tech-stack">
-							<li class="featured__info">Java</li>
+						<h3 class="featured__label">Group Members</h3>
+						<ul class="featured__group-members">
+							<li class="featured__info">Christian Lloyd Masong</li>
+							<li class="featured__info">John Mckyle Dayon</li>
+							<li class="featured__info">John Humphrey Sanchez</li>
+							<li class="featured__info">Jonel C. Escaran</li>
 						</ul>
 					</div>
 					<div>
-						<h3 class="featured__label">Project Type</h3>
-						<p class="featured__info">basta</p>
+						<h3 class="featured__label">Language</h3>
+						<p class="featured__info">Java</p>
 					</div>
 					<div>
 						<h3 class="featured__label">Timeline</h3>
@@ -237,33 +244,6 @@
 		<script src="assets/js/lazy-loading.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/typewriter.js"></script>
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				var backToTopBtn = document.querySelector('.back-to-top');
-
-				// Function to handle scroll event
-				function handleScroll() {
-					// If the user has scrolled more than 300 pixels from the top, show the button; otherwise, hide it
-					if (window.scrollY > 500) {
-						backToTopBtn.style.display = "block";
-					} else {
-						backToTopBtn.style.display = "none";
-					}
-				}
-
-				// Add scroll event listener
-				window.addEventListener('scroll', handleScroll);
-
-				// Add click event listener for back-to-top button
-				backToTopBtn.addEventListener('click', function(e) {
-					e.preventDefault();
-					document.querySelector('#header').scrollIntoView({ behavior: 'smooth' });
-				});
-
-				// Hide the back-to-top button initially
-				backToTopBtn.style.display = "none";
-			});
-		</script>
+		<script src="assets/js/slide-up.js"></script>
 	</body>
 </html>
