@@ -53,6 +53,9 @@
     margin-left: 0.5em;
 }
 
+.about__img {
+    border-radius: 20%;
+}
 
 /* xs */
 @media (min-width: 475px) {
@@ -94,7 +97,9 @@
 
 /* md */
 /* @media (min-width: 768px) {
-
+    .about__img {
+        margin-top: -10rem;
+    }
 } */
 
 /* lg */
@@ -119,6 +124,12 @@
     
     .about__list {
         font-size: var(--size-lg);
+    }
+}
+
+@media (min-width: 1032px) {
+    .about__img {
+        margin-top: -8rem;
     }
 }
 
