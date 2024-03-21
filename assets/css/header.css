@@ -14,6 +14,7 @@
 
 .header__menu {
     display: none;
+    margin-right: 2rem;
 }
 
 .header__menu li a {
@@ -25,6 +26,10 @@
     width: var(--size-2xl);
     height: var(--size-2xl);
     display: block;
+}
+
+.header__icon {
+    margin-left: 5rem;
 }
 
 .header__icon a,

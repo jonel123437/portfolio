@@ -1,25 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var backToTopBtn = document.querySelector('.back-to-top');
-
-    // Function to handle scroll event
-    function handleScroll() {
-        // If the user has scrolled more than 300 pixels from the top, show the button; otherwise, hide it
-        if (window.scrollY > 500) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    }
-
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Add click event listener for back-to-top button
-    backToTopBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector('#header').scrollIntoView({ behavior: 'smooth' });
+function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
+  }
 
-    // Hide the back-to-top button initially
-    backToTopBtn.style.display = "none";
-});
+  // Function to show/hide the scroll button based on scroll position
+  window.onscroll = function() {
+    var scrollBtn = document.querySelector('.scroll-up-btn');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  };

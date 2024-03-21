@@ -84,9 +84,6 @@
     cursor: pointer;
 }
 
-
-
-
 /* xs */
 @media (min-width: 475px) {
     .featured__subtitle {

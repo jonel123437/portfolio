@@ -18,9 +18,20 @@
     color: var(--clr-slate600);
     max-width: 60ch;
 }
+.contact__buttons {
+    display: flex;
+    justify-content: center;
+}
 
-.contact__btn {
-    font-size: var(--size-sm);
+.contact__buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    width: 50px; 
+    height: 50px; 
+    font-size: 20px;
+    border-radius: 50%; 
 }
 
 /* xs */
